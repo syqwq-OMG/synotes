@@ -2,9 +2,16 @@
 #import "@preview/showybox:2.0.4": showybox
 #import "@preview/theorion:0.4.0": remark
 
+#let link-color = rgb("#227591")
+
 #let doc(author: "author", id: 123456789, hw-id: 1,course:"course", body) = {
   show: show-utils
   set text(font: (en-font-serif, cn-font-serif), weight: 100)
+
+
+  set outline.entry(fill: repeat(math.dot, gap: 0.1em))
+  show outline.entry: it => text(fill: link-color, it)
+  show link: it => text(fill: link-color, it)
 
   set heading(numbering: "I.1")
   set page(numbering: "1", header: context {

@@ -189,6 +189,19 @@
   render: rect-box-style.with(fill: colors.at("problem")),
 )
 
+#let (corollary-counter, corollary-box, corollary, show-corollary) = make-frame(
+  "corollary",
+  theorion-i18n-map.at("corollary").zh.tw,
+  counter: theorem-counter,
+  render: rect-box-style.with(fill: colors.at("2")),
+)
+
+#let gemini = rect-box-style.with(
+  fill: colors.at("1"),
+  prefix: none,
+  title: [#box(image("../pic/gemini.svg"), height: 1em, baseline: 0.1em) #text(weight: 650)[What Gemini says]],
+)
+
 #let proof(body, name: none, thmprefix: default-thmprefix, thmtitle: default-thmtitle) = context {
   thmprefix(translation.proof.at(text.lang))
   if name != none {
@@ -220,6 +233,7 @@
   show: show-remark
   show: show-example
   show: show-problem
+  show: show-corollary
 
   body
 }
