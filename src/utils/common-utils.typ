@@ -34,7 +34,7 @@
     // weight: "light",
   )
   // 代码字体
-  show raw: text.with(font: (en-font-mono, cn-font-sans), weight: 400)
+  show raw: set text(font: (en-font-mono, cn-font-sans), weight: 400)
   // 汉语标点
   show "。": ". "
   // 段落首行缩进
