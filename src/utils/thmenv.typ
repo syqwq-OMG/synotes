@@ -1,4 +1,4 @@
-#import "@preview/theorion:0.4.0": make-frame, theorem-counter, theorion-i18n-map
+#import "@preview/theorion:0.4.0": *
 #import "@preview/showybox:2.0.4": showybox
 #import "common-utils.typ": *
 #import "math-utils.typ": translation
@@ -121,6 +121,30 @@
   )
 }
 
+#let plain-text-style(
+  prefix: auto,
+  title: "",
+  full-title: auto,
+  fill: luma(500),
+  thmtitle: default-thmtitle,
+  thmtext: default-thmtext,
+  thmprefix: default-thmprefix,
+  body,
+) = {
+  let titlefmt = thmtitle.with(color:fill)
+  let bodyfmt = thmtext.with(color:black)
+  let prefixfmt = thmprefix.with(color:fill)
+
+  box({
+    prefixfmt(prefix)
+    if title != "" {
+      titlefmt(title)
+    }
+    bodyfmt(body)
+  })
+}
+)
+
 // 组装定理环境
 #let (theorem-counter, theorem-box, theorem, show-theorem) = make-frame(
   "theorem",
@@ -128,7 +152,7 @@
   counter: theorem-counter, // inherit the old counter, `none` by default
   inherited-levels: 2, // useful when you need a new counter
   inherited-from: heading, // heading or just another counter
-  render: rect-box-style.with(fill: colors.at("theorem")),
+  render: plain-text-style.with(fill: colors.at("theorem")),
   // render: line-box-style.with(fill: colors.at("purple").lighten(60%)),
 )
 

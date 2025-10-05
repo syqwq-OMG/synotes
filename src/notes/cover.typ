@@ -21,11 +21,11 @@
     #image(cover-pic, width: w)
     #place(center, rect(width: w, height: rect-h, stroke: none, fill: cover-rec-color))
   ]
-  align(center, banner)
+  align(center, banner) 
   v(rect-h)
   v(40pt)
   v(1fr)
-  pad(left: 0em, text(size: 28pt, weight: 450, font: (en-font-serif, cn-font-sans), course))
+  pad(left: 0em, text(size: 28pt, weight: 450, font: (en-font-sans, cn-font-sans), course))
   pad(left: 0em, top: 1em, text(size: 18pt, weight: 450, font: (en-font-serif, cn-font-sans), course-alt))
   [
     #set text(fill: luma(130), size: 15pt, font: (en-font-serif, cn-font-serif))

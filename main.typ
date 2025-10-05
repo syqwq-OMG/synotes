@@ -1,43 +1,13 @@
-#import "lib.typ": math-note
-#import math-note: *
+#import "lib.typ": simple-math-note
+#import simple-math-note: *
 
 #show: note.with(author: "syqwq", course: "线性代数",course-alt:[$LL$inear $AA$lgebra], watermark: none)
 #set text(lang: "zh")
-= 你好
-== 1111
 
-#theorem(title: [勾股定理])[
-  在直角三角形中，如果三边长度为 $a,b,c$ ，且 $c$ 为斜边，则
-  $
-    a^2 + b^2 = c^2
-  $<eq-1>
-]<thm-1>
+= 更新过程
 
-#lorem(100)
-#lorem(100)
-#lorem(100)
-#lorem(100)
-#lorem(100)
-#lorem(100)
+== 定义和基本性质
 
-according to @eq-1, 1111
-
-#example(title: [一些域的例子])[
-  你好啊
-  #set par(first-line-indent: 0em)
-
-  你好 
-  + $QQ, RR, CC$
-
-  + $Z_p = ZZ \/ p ZZ$，其中 $p$ 是素数 
-  + 有理函数域 $F=QQ(x)$ 
-
-    可以考虑
-    $
-    F=lr({ f(x) / g(x) | f,g in QQ[x], g != 0 
-    }).
-    $
-    听懂掌声啊噶人们。听懂掌声啊噶人们。听懂掌声啊噶人们。听懂掌声啊噶人们。听懂掌声啊噶人们。听懂掌声啊噶人们。听懂掌声啊噶人们。听懂掌声啊噶人们。听懂掌声啊噶人们。听懂掌声啊噶人们。听懂掌声啊噶人们。听懂掌声啊噶人们。听懂掌声啊噶人们。听懂掌声啊噶人们。听懂掌声啊噶人们。听懂掌声啊噶人们。听懂掌声啊噶人们。
-
-  + 考虑线性映射 $scr(A) in End(RR^(3) )$ 
+#definition(title:[更新过程])[
+  设非负 D.R.V. 列 $lr({ tau_k })_(k>=1) tilde.op^("i.i.d")  F(dot)$ 分布函数，即 $PP(tau_1<=t)=F(t)$，其中，约定 $F(0)=0$，则 $0<EE tau_1 <= +oo$。 令 $T_n=sum_(k=1)^(n) tau_k, n>=1$。约定 $T_0=0$。则称由 $N(t)=max lr({ n:T_n<=t }) bold(1)_(lr({ t>0 })) $ 定义的计数过程为更新过程。       
 ]
