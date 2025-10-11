@@ -1,6 +1,6 @@
 #import "../utils/lib.typ": *
 
-#let en-font-serif = "Libertinus Serif"
+// #let en-font-serif = "Libertinus Serif"
 
 #let lecture-thmprefix(t,color:black)={
   text(font: en-font-serif, weight: 650, fill: color)[#t]
@@ -17,7 +17,7 @@
   }
   t = a.join()
 
-  text(font: (en-font-serif, cn-kaiti), fill: color)[#t]
+  text(font: (en-font-serif, cn-kaiti), fill: color,emph(t))
 }
 
 #let lecture-render-fn=plain-text-style.with(
@@ -123,7 +123,7 @@
 
 #let note(course: "course", author: "author", other: [Autumn #datetime.today().year() -- Professor], body) = {
   show: show-utils
-  set text(font: "Libertinus Serif")
+  // set text(font: "Libertinus Serif")
 
   set page(
     numbering: "1",
