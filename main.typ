@@ -7,7 +7,7 @@
   other:[Autumn #datetime.today().year() -- Professor]
 )
 
-#lecture(date:datetime.today(),topic:"Introduction")
+#lecture(date:datetime(year: 2025,month: 10,day: 11),topic:"Introduction")
 == Core material
 == Classification
 #lorem(1000)

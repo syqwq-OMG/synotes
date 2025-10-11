@@ -198,7 +198,7 @@
             outset: 2pt,
           )[
             #set text(size: 11pt, weight: "regular")
-            #date.display()
+            #date.display("[month repr:short].[day] [year]")
           ],
         )
       ],
