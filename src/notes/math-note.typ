@@ -8,7 +8,6 @@
   watermark: "ecnu",
   course-alt: "sub-course",
   footer-text: "生如夏花之绚烂，死如秋叶之静美",
-  mail: 123456789,
   body,
 ) = {
   show: show-utils
@@ -60,6 +59,9 @@
   show heading.where(level: 1): t => context {
     if here().page() == 2 { return t }
     // if here().page() == query(<end>).first().location().page() { return t }
+    if here().page() != counter(page).get().first() {
+      return t;
+    }
 
     let chp = context counter(heading).get().at(0)
 
@@ -81,8 +83,8 @@
     [#counter(heading).display("1.1.1") #t.body]
   }
 
-  // svg-cover(author: author, course: course)
-  elegant-cover(author: author, course: course, course-alt: course-alt, footer-text: footer-text, mail: mail)
+  svg-cover(author: author, course: course)
+  // elegant-cover(author: author, course: course, course-alt: course-alt, footer-text: footer-text)
 
   pagebreak()
 
@@ -92,3 +94,8 @@
 
   body
 }
+
+// #let proof = proof.with(
+//   thmtitle: default-thmtitle.with(color: black),
+//   thmprefix: default-thmprefix.with(color: black),
+// )
