@@ -1,4 +1,4 @@
-#import "../utils/lib.typ": *
+#import "../utils/mod.typ": *
 
 #let doc(course: "course", hwk_id: 0, author: "author", stu_id: 1234567890, body) = {
   show:show-utils

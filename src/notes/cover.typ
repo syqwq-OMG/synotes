@@ -1,4 +1,4 @@
-#import "../utils/lib.typ": *
+#import "../utils/mod.typ": *
 
 #let elegant-cover(
   author: "author",

@@ -1,4 +1,4 @@
-#import "lib.typ": sydvd
+#import "src/mod.typ": sydvd
 #import sydvd:*
 
 #show: note.with(

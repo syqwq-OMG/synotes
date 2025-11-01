@@ -1,4 +1,4 @@
-#import "../utils/lib.typ": *
+#import "../utils/mod.typ": *
 
 // #let en-font-serif = "Libertinus Serif"
 

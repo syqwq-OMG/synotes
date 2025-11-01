@@ -1,4 +1,4 @@
-#import "../utils/lib.typ": *
+#import "../utils/mod.typ": *
 #import "@preview/showybox:2.0.4": showybox
 #import "@preview/theorion:0.4.0": remark
 

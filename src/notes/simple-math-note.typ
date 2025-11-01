@@ -1,4 +1,4 @@
-#import "../utils/lib.typ": *
+#import "../utils/mod.typ": *
 #import "cover.typ": *
 #import "@preview/hydra:0.6.2": hydra, selectors
 #import "@preview/catppuccin:1.0.1": flavors
