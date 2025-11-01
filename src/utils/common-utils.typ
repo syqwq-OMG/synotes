@@ -1,4 +1,4 @@
-#import "@preview/itemize:0.1.2" as el
+#import "@preview/itemize:0.1.2" as _itemize
 #import "@preview/zebraw:0.5.5": zebraw
 #import emoji: drops, eyes
 
@@ -24,6 +24,28 @@
   "remark": rgb("A997DF"), // 7 remark
 )
 
+#let dvdcolors = (
+  rgb("#9E9E9E"),
+  rgb("#F44336"),
+  rgb("#E91E63"),
+  rgb("#9C27B0"),
+  rgb("#673AB7"),
+  rgb("#3F51B5"),
+  rgb("#2196F3"),
+  rgb("#03A9F4"),
+  rgb("#00BCD4"),
+  rgb("#009688"),
+  rgb("#4CAF50"),
+  rgb("#8BC34A"),
+  rgb("#CDDC39"),
+  rgb("#FFEB3B"),
+  rgb("#FFC107"),
+  rgb("#FF9800"),
+  rgb("#FF5722"),
+  rgb("#795548"),
+  rgb("#9E9E9E"),
+)
+
 #let show-common-format(body) = {
   // 字体
   set text(
@@ -41,8 +63,8 @@
   set par(first-line-indent: 2em)
 
   // 更好的列表（列表项公式居中）
-  show ref: el.ref-enum
-  show: el.default-enum-list
+  show ref: _itemize.ref-enum
+  show: _itemize.default-enum-list
   set enum(numbering: "(1)", full: true)
 
   show: zebraw.with(background-color: luma(249), indentation: 4, hanging-indent: true)
