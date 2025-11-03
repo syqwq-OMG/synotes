@@ -69,3 +69,4 @@ _the probability of getting a nonrepresentative sample_ by $delta$ , and call (1
   where $epsilon$ is the accuracy parameter and $delta$ is the confidence parameter. 
 ]<thm:pac-learnability-finite-hypothesis-class>
 
+- $a$ 
